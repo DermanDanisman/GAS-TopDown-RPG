@@ -25,7 +25,7 @@ public class HighlightActor : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+				"Core", "HeadMountedDisplay",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
