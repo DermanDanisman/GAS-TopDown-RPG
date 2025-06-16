@@ -13,8 +13,9 @@ class UHighlightInterface : public UInterface
 	GENERATED_BODY()
 };
 
+
 /**
- * 
+ * Implement this interface on any actor that should react to highlight events.
  */
 class HIGHLIGHTACTOR_API IHighlightInterface
 {
@@ -22,7 +23,9 @@ class HIGHLIGHTACTOR_API IHighlightInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-
+	
+	/** Called when the actor should be highlighted. */
 	virtual void HighlightActor() = 0;
+	/** Called when the actor should remove highlight. */
 	virtual void UnHighlightActor() = 0;
 };

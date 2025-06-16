@@ -4,6 +4,8 @@
 
 #include "Modules/ModuleManager.h"
 
+#define HIGHLIGHTABLE ECC_GameTraceChannel1
+
 class FHighlightActorModule : public IModuleInterface
 {
 public:
