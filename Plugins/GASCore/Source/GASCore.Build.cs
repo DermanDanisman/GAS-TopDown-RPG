@@ -25,7 +25,8 @@ public class GASCore : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+				"Core", 
+				"GameplayAbilities",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -38,7 +39,6 @@ public class GASCore : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"GameplayAbilities", 
 				"GameplayTags", 
 				"GameplayTasks"
 			}
