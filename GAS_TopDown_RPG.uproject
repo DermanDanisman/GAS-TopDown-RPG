@@ -12,7 +12,8 @@
 				"Engine",
 				"GameplayAbilities",
 				"GASCore",
-				"UMG"
+				"UMG",
+				"CoreUObject"
 			]
 		}
 	],
