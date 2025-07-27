@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// © 2025 Heathrow (Derman). All rights reserved.
 
 using UnrealBuildTool;
 
@@ -8,48 +8,48 @@ public class GASCore : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				// ... add public include paths required here ...
-			}
-			);
-				
-		
-		PrivateIncludePaths.AddRange(
-			new string[] { 
-				// ... add other private include paths required here ...
-			}
-			);
-			
-		
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", 
+				"Core",
+				"CoreUObject", 
+				"Engine",
 				"GameplayAbilities",
-				// ... add other public dependencies that you statically link with here ...
+				"GameplayTags",
+				"GameplayTasks",
+				"NetCore",
+				"UMG", // For UI widgets
+				"EnhancedInput" // For modern input system
 			}
-			);
+		);
 			
-		
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"CoreUObject",
-				"Engine",
 				"Slate",
 				"SlateCore",
-				"GameplayTags", 
-				"GameplayTasks"
+				"ToolMenus",
+				"EditorStyle",
+				"EditorWidgets",
+				"UnrealEd",
+				"PropertyEditor",
+				"KismetCompiler",
+				"BlueprintGraph",
+				"AIModule" // For AI integration
 			}
-			);
+		);
 		
-		
-		DynamicallyLoadedModuleNames.AddRange(
-			new string[]
-			{
-				// ... add any modules that your module loads dynamically here ...
-			}
+		if (Target.bBuildEditor)
+		{
+			PrivateDependencyModuleNames.AddRange(
+				new string[]
+				{
+					"EditorStyle",
+					"EditorWidgets",
+					"UnrealEd",
+					"ToolMenus"
+				}
 			);
+		}
 	}
 }
